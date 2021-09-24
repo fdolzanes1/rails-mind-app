@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+ 	<h1>CONTENTS#INDEX</h1>
+ 	<% @contents.each do |content| %>
+ 		Title: <%= content.title %>
+ 		Description: <%= content.description %>
+ 	<% end %>
+</body>
+</html>
