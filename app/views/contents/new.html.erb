@@ -5,6 +5,9 @@
 	<title></title>
 </head>
 <body>
+	<% if @content.errors.any? %>
+		<%= @content.errors.full_messages.join('') %>
+	<% end %>
  	<%= form_with(model: @content, local: true) do |form| %>
  		<div class="field">
  			<%= form.label :title %>
