@@ -24,7 +24,17 @@ class ContentsController < ApplicationController
 	end
 
 	def update
+		@content = Content.find(params[:id])
 
+		if @content.update(content_params)
+			redirect_to contents_path, notice: 'Content Successfully created'
+		else
+			render :edit
+		end
+	end
+
+	def show
+		@content = Content.find(params[:id])
 	end
 
 	private
