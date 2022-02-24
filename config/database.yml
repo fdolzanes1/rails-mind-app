@@ -8,7 +8,7 @@ default: &default
 development:
   <<: *default
   host: localhost
-  port: 5432
+  port: 5454
   database: rails_mind_app_development
   username: postgres
   password: 123456
